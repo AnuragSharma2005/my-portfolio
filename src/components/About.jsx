@@ -11,16 +11,11 @@ const About = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-7xl font-bold text-left text-[#4B2E2E] mb-8">
-               About <span className="text-[#AF8362]">Me</span>
-          </h2>
-          
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-            
-            
+            {/* Image Section */}
             <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center md:justify-end px-4 md:px-0">
               <div
-                className="w-full max-w-[320px] h-[380px] md:h-[440px] mt-[-80px] shadow-xl"
+                className="w-full max-w-[320px] h-[380px] md:h-[440px] shadow-xl"
                 style={{
                   borderRadius: '50%',
                   boxShadow: '0 25px 80px #4B2E2E',
@@ -37,8 +32,14 @@ const About = () => {
               </div>
             </div>
 
-            
+            {/* About Me Section */}
             <div className="order-2 md:order-1 w-full md:w-11/12 text-[#4B2E2E] px-4 md:px-0">
+              {/* About Me Heading */}
+              <h2 className="text-7xl font-bold text-left text-[#4B2E2E] mb-8">
+                About <span className="text-[#AF8362]">Me</span>
+              </h2>
+
+              {/* About Me Content */}
               <p className="mb-4 text-justify">
                 Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
                 I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
@@ -49,7 +50,9 @@ const About = () => {
                 I love working with people, whether it’s through tech or events, and I’m always looking to grow, learn, and make meaningful contributions.
                 Thanks for visiting my portfolio!
               </p>
-              <h3 className="text-5xl font-semibold text-[#4B2E2E] mb-4 ">Education</h3>
+
+              {/* Education Section */}
+              <h3 className="text-5xl font-semibold text-[#4B2E2E] mb-4">Education</h3>
               {aboutData.education.map((edu) => (
                 <div key={edu.id} className="mb-4">
                   <h4 className="text-lg font-medium text-[#AF8362]">B.E(Computer Science)</h4>

@@ -11,12 +11,12 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row items-center gap-12"
         >
-     
+          {/* Photo Section with top margin for spacing */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-[280px] h-[380px] md:w-[320px] md:h-[440px] relative shadow-xl"
+            className="w-[280px] h-[380px] md:w-[320px] md:h-[440px] relative shadow-xl mt-8 md:mt-0"
             style={{
               borderRadius: '50%',
               boxShadow: '0 25px 80px #4B2E2E',
@@ -32,7 +32,7 @@ const Home = () => {
             />
           </motion.div>
 
-         
+          {/* Text Section */}
           <div className="text-left">
             <h2 className="text-[#4B2E2E] text-4xl mb-2">Hello, Myself</h2>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#4B2E2E] mb-4">
@@ -57,14 +57,13 @@ const Home = () => {
               Ready to create something amazing together? Let’s talk.
             </p>
             <div className="flex gap-4">
-            <a
-                 href="/my-portfolio/Anu%20new%20resume.pdf" 
-                 className="px-6 py-3 bg-[#4B2E2E] text-white rounded-xl font-semibold hover:bg-[#4B2E2E] transition"
-                 download
-                >
-                  Download Resume
-                </a>
-
+              <a
+                href="/my-portfolio/Anu%20new%20resume.pdf"
+                className="px-6 py-3 bg-[#4B2E2E] text-white rounded-xl font-semibold hover:bg-[#4B2E2E] transition"
+                download
+              >
+                Download Resume
+              </a>
             </div>
           </div>
         </motion.div>
