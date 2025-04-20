@@ -58,9 +58,7 @@ const Skills = () => {
           <h2 className="text-7xl font-bold text-center text-[#4B2E2E] mb-8">
                 MY <span className="text-[#AF8362]">Services</span>
               </h2>
-          <p className="text-center text-2xl text-[#4B2E2E] mb-12">
-            Crafting digital experiences with expertise and passion
-          </p>
+       
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {skillCards.map((skill, index) => (
    <motion.div
