@@ -16,7 +16,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-[280px] h-[380px] md:w-[320px] md:h-[440px] relative shadow-xl mt-8 md:mt-0"
+            className="w-[280px] h-[380px] md:w-[320px] md:h-[440px] relative shadow-xl mt- md:mt-0"
             style={{
               borderRadius: '50%',
               boxShadow: '0 25px 80px #4B2E2E',

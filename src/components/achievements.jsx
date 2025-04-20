@@ -1,6 +1,5 @@
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-import { achievementsData } from "../data/mockData"; // yaha data array hona chahiye
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,18 +7,61 @@ import "slick-carousel/slick/slick-theme.css";
 const Achievements = () => {
   const settings = {
     dots: false,
-    infinite: true,   
+    infinite: true,
     speed: 700,
-    slidesToShow: 1,
+    slidesToShow: 3, // Show 3 cards at once
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500, 
+    autoplaySpeed: 2500,
     arrows: true,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
+  const achievementItems = [
+    {
+      title: "Core Member (CEED)",
+      description:
+        "As a core member of the CEED Startup Club (Chitkara University), I help organize and execute events that promote innovation, entrepreneurship, and collaboration among students, fostering a dynamic platform for young entrepreneurs to thrive.",
+      image: "/my-portfolio/jazba.jpg",
+    },
+    {
+      title: "Certifications and Milestones",
+      description: (
+        <div>
+          <ul className="list-disc ml-4">
+            <li><strong>Hackathon - HackIndia 2024:</strong> Awarded certificate for participation and innovation.</li>
+            <li><strong>Hackathon - Hack-O-Octo:</strong> Recognized for contributions and problem-solving skills.</li>
+            <li><strong>PitchMasters:</strong> Earned recognition for pitching innovative ideas.</li>
+            <li><strong>Workshop - "IPR & Patent Filing":</strong> Completed workshop on Intellectual Property Rights and Patent Filing.</li>
+          </ul>
+        </div>
+      ),
+      image: "/my-portfolio/certificates.jpg",
+    },
+    {
+      title: "Prize Winner – IEEE Day Treasure Hunt",
+      description:
+        "I was awarded a prize in the Treasure Hunt competition during the IEEE Day event organized by IEEE. This achievement highlights my strong problem-solving abilities, quick thinking, and effective teamwork.",
+      image: "/my-portfolio/IEEE.jpg",
+    },
+  ];
+
   return (
-    <section id="achievements" className="py-20 bg-white text-[#4B2E2E]">
+    <section id="achievements" className="py-20 bg-[#FAEBDD] text-[#4B2E2E]">
       <div className="max-w-screen-xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,17 +69,26 @@ const Achievements = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-<h2 className="text-5xl font-bold text-center text-[#4B2E2E] mb-8">
-                MY <span className="text-[#AF8362]">Achievements</span>
-              </h2>
+          <h2 className="text-5xl font-bold text-center text-[#4B2E2E] mb-12">
+            MY <span className="text-[#AF8362]">Achievements</span>
+          </h2>
           <Slider {...settings}>
-            {achievementsData.map((item, index) => (
+            {achievementItems.map((item, index) => (
               <div key={index} className="px-4">
-                <div className="bg-[#4B2E2E] rounded-xl shadow-md p-6 text-center">
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                <div className="bg-white rounded-3xl shadow-md p-6 text-center transition-all duration-300 h-[500px] flex flex-col items-center justify-start border-2 border-transparent hover:border-[#AF8362] focus-within:border-[#AF8362] active:border-[#AF8362]">
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-52 h-52 object-cover rounded-full shadow-lg border-4 border-[#AF8362]"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#4B2E2E] mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-white">{item.description}</p>
+                  <div className="text-[#4B2E2E] text-sm flex-grow">
+                    {item.description}
+                  </div>
                 </div>
               </div>
             ))}

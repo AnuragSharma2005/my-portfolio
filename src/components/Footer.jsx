@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -18,8 +18,8 @@ const Footer = () => {
               href="https://www.linkedin.com/in/anurag-sharma-34bb54295/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-[#4B2E2E] hover:text-white transition-colors duration-300">
-            
+              className="text-2xl text-[#4B2E2E] hover:text-white transition-colors duration-300"
+            >
               <FaLinkedin />
             </a>
             <a
@@ -29,6 +29,14 @@ const Footer = () => {
               className="text-2xl text-[#4B2E2E] hover:text-white transition-colors duration-300"
             >
               <FaInstagram />
+            </a>
+            <a
+              href="mailto:anuragwork2005@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl text-[#4B2E2E] hover:text-white transition-colors duration-300"
+            >
+              <FaEnvelope />
             </a>
           </div>
           <p className="text-[#4B2E2E] text-sm">
