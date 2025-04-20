@@ -28,7 +28,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full h-20 z-50 transition-all duration-300 bg-[#AF8362] backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      className={`fixed w-full h-16 z-50 transition-all duration-300 bg-[#AF8362] backdrop-blur-sm shadow-lg' : 'bg-transparent'
       }`}
       
     >
