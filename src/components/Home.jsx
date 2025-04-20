@@ -58,7 +58,7 @@ const Home = () => {
             </p>
             <div className="flex gap-4">
             <a
-                 href="/Anu%20new%20resume.pdf"
+                 href="/Anunewresume.pdf"
                  className="px-6 py-3 bg-[#4B2E2E] text-white rounded-xl font-semibold hover:bg-[#4B2E2E] transition"
                  download
                 >
