@@ -29,7 +29,7 @@ const skillCards = [
   {
     id: 3,
     title: 'UI/UX Design',
-    description: '"As a UI/UX Designer, I design intuitive and aesthetically pleasing digital experiences that prioritize user needs. From wireframes to final interfaces, I ensure every interaction is seamless, engaging, and impactful."',
+    description: '"As a UI/UX Designer, I focus on making websites and apps that are both beautiful and easy to use. I start by understanding what users want and how they interact with technology. Then I create simple sketches and layouts (called wireframes) to plan how everything should look and work. After that, I design the final version with colors, buttons, and visuals that are clean and user-friendly."',
     icon: <PenTool size={28} />,
     color: 'bg-[#F0E0D0]',
     level: 80,

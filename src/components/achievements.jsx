@@ -43,10 +43,10 @@ const Achievements = () => {
       description: (
         <div>
           <ul className="list-disc ml-4">
-            <li><strong>Hackathon - HackIndia 2024:</strong> Awarded certificate for participation and innovation.</li>
-            <li><strong>Hackathon - Hack-O-Octo:</strong> Recognized for contributions and problem-solving skills.</li>
-            <li><strong>PitchMasters:</strong> Earned recognition for pitching innovative ideas.</li>
-            <li><strong>Workshop - "IPR & Patent Filing":</strong> Completed workshop on Intellectual Property Rights and Patent Filing.</li>
+            <li><strong>Hackathon - HackIndia 2024:</strong></li>
+            <li><strong>Hackathon - Hack-O-Octo:</strong> </li>
+            <li><strong>PitchMasters:</strong></li>
+            <li><strong>Workshop - "IPR & Patent Filing":</strong></li>
           </ul>
         </div>
       ),
@@ -61,7 +61,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" className="py-20 bg-[#FAEBDD] text-[#4B2E2E]">
+    <section id="achievements" className="py-20 bg-white text-[#4B2E2E]">
       <div className="max-w-screen-xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ const Achievements = () => {
           <Slider {...settings}>
             {achievementItems.map((item, index) => (
               <div key={index} className="px-4">
-                <div className="bg-white rounded-3xl shadow-md p-6 text-center transition-all duration-300 h-[500px] flex flex-col items-center justify-start border-2 border-transparent hover:border-[#AF8362] focus-within:border-[#AF8362] active:border-[#AF8362]">
+                <div className="bg-[#FAEBDD] rounded-3xl shadow-md p-6 text-center transition-all duration-300 h-[500px] flex flex-col items-center justify-start border-2 border-transparent hover:border-[#AF8362] focus-within:border-[#AF8362] active:border-[#AF8362]">
                   <div className="flex justify-center mb-4">
                     <img
                       src={item.image}
