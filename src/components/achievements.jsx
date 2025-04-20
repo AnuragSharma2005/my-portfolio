@@ -9,7 +9,7 @@ const Achievements = () => {
     dots: false,
     infinite: true,
     speed: 700,
-    slidesToShow: 3, // Show 3 cards at once
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
@@ -41,13 +41,12 @@ const Achievements = () => {
     {
       title: "Certifications and Milestones",
       description: (
-<div className="space-y-2">
-  <div><strong>Hackathon - HackIndia 2024:</strong> Built a smart app in 36 hrs.</div>
-  <div><strong>Hackathon - Hack-O-Octo:</strong> Solved real-time tech problem.</div>
-  <div><strong>PitchMasters:</strong> Pitched a startup idea to jury.</div>
-  <div><strong>Workshop - IPR & Patent Filing:</strong> Learned patent basics.</div>
-</div>
-
+        <div className="space-y-2">
+          <div><strong>Hackathon - HackIndia 2024:</strong> Built a smart app in 36 hrs.</div>
+          <div><strong>Hackathon - Hack-O-Octo:</strong> Solved real-time tech problem.</div>
+          <div><strong>PitchMasters:</strong> Pitched a startup idea to jury.</div>
+          <div><strong>Workshop - IPR & Patent Filing:</strong> Learned patent basics.</div>
+        </div>
       ),
       image: "/my-portfolio/certificates.jpg",
     },
@@ -71,33 +70,33 @@ const Achievements = () => {
           <h2 className="text-5xl font-bold text-center text-[#4B2E2E] mb-12">
             MY <span className="text-[#AF8362]">Achievements</span>
           </h2>
+
           <Slider {...settings}>
             {achievementItems.map((item, index) => (
               <div key={index} className="px-4">
-              <div className="bg-[#FAEBDD] rounded-3xl shadow-md p-6 h-[500px] flex flex-col items-center justify-start text-center border-2 border-transparent hover:border-[#AF8362] transition-all duration-300">
-            
-                {/* Image */}
-                <div className="mb-4">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-52 h-52 object-cover rounded-full shadow-lg border-4 border-[#AF8362]"
-                  />
+                <div className="bg-[#FAEBDD] rounded-3xl shadow-md p-6 h-[500px] flex flex-col items-center justify-start text-center border-2 border-transparent hover:border-[#AF8362] transition-all duration-300 overflow-hidden">
+                  
+                  {/* Image */}
+                  <div className="mb-4">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-52 h-52 object-cover rounded-full shadow-lg border-4 border-[#AF8362]"
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-semibold text-[#4B2E2E] mb-4">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <div className="text-[#4B2E2E] text-sm leading-relaxed max-w-xs overflow-y-auto max-h-[180px] pr-2 scrollbar-thin scrollbar-thumb-[#AF8362]">
+                    {item.description}
+                  </div>
+
                 </div>
-            
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-[#4B2E2E] mb-4">
-                  {item.title}
-                </h3>
-            
-                {/* Description */}
-                <div className="text-[#4B2E2E] text-sm leading-relaxed max-w-xs">
-                  {item.description}
-                </div>
-                
               </div>
-            </div>
-            
             ))}
           </Slider>
         </motion.div>
