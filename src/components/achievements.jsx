@@ -41,14 +41,13 @@ const Achievements = () => {
     {
       title: "Certifications and Milestones",
       description: (
-        <div>
-          <ul className="list-disc ml-4">
-            <li><strong>Hackathon - HackIndia 2024:</strong></li>
-            <li><strong>Hackathon - Hack-O-Octo:</strong> </li>
-            <li><strong>PitchMasters:</strong></li>
-            <li><strong>Workshop - "IPR & Patent Filing":</strong></li>
-          </ul>
-        </div>
+<div className="space-y-2">
+  <div><strong>Hackathon - HackIndia 2024:</strong> Built a smart app in 36 hrs.</div>
+  <div><strong>Hackathon - Hack-O-Octo:</strong> Solved real-time tech problem.</div>
+  <div><strong>PitchMasters:</strong> Pitched a startup idea to jury.</div>
+  <div><strong>Workshop - IPR & Patent Filing:</strong> Learned patent basics.</div>
+</div>
+
       ),
       image: "/my-portfolio/certificates.jpg",
     },
@@ -75,22 +74,30 @@ const Achievements = () => {
           <Slider {...settings}>
             {achievementItems.map((item, index) => (
               <div key={index} className="px-4">
-                <div className="bg-[#FAEBDD] rounded-3xl shadow-md p-6 text-center transition-all duration-300 h-[500px] flex flex-col items-center justify-start border-2 border-transparent hover:border-[#AF8362] focus-within:border-[#AF8362] active:border-[#AF8362]">
-                  <div className="flex justify-center mb-4">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-52 h-52 object-cover rounded-full shadow-lg border-4 border-[#AF8362]"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#4B2E2E] mb-4">
-                    {item.title}
-                  </h3>
-                  <div className="text-[#4B2E2E] text-sm flex-grow">
-                    {item.description}
-                  </div>
+              <div className="bg-[#FAEBDD] rounded-3xl shadow-md p-6 h-[500px] flex flex-col items-center justify-start text-center border-2 border-transparent hover:border-[#AF8362] transition-all duration-300">
+            
+                {/* Image */}
+                <div className="mb-4">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-52 h-52 object-cover rounded-full shadow-lg border-4 border-[#AF8362]"
+                  />
                 </div>
+            
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-[#4B2E2E] mb-4">
+                  {item.title}
+                </h3>
+            
+                {/* Description */}
+                <div className="text-[#4B2E2E] text-sm leading-relaxed max-w-xs">
+                  {item.description}
+                </div>
+                
               </div>
+            </div>
+            
             ))}
           </Slider>
         </motion.div>

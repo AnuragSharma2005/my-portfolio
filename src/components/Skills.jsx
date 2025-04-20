@@ -59,43 +59,46 @@ const Skills = () => {
                 MY <span className="text-[#AF8362]">Services</span>
               </h2>
        
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {skillCards.map((skill, index) => (
-   <motion.div
-   key={skill.id}
-   initial={{ opacity: 0, y: 20 }}
-   whileInView={{ opacity: 1, y: 0 }}
-   transition={{ duration: 0.6, delay: index * 0.1 }}
-   viewport={{ once: true }}
-   className={`group rounded-2xl p-6 ${skill.color} relative overflow-hidden h-96 
-               transition-all duration-300 
-               hover:bg-[#F0E0D0] hover:outline hover:outline-[#4B2E2E] hover:outline-2`}
- >
-   <div className="flex flex-col items-center justify-center mb-4">
-  <div className="text-[#4B2E2E] group-hover:text-[#4B2E2E] mb-2">
-    {skill.icon}
-  </div>
-  <h3 className="text-xl font-semibold text-[#4B2E2E] group-hover:text-[#4B2E2E] text-center">
-    {skill.title}
-  </h3>
+              <div className="flex justify-between gap-6 flex-nowrap">
+  {skillCards.map((skill, index) => (
+    <motion.div
+      key={skill.id}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className={`group rounded-2xl p-6 ${skill.color} w-[30%] 
+                  flex flex-col justify-start transition-all duration-300 
+                  hover:bg-[#F0E0D0] hover:outline hover:outline-[#4B2E2E] hover:outline-2`}
+    >
+      {/* Icon + Title */}
+      <div className="text-center mb-4">
+        <div className="inline-block text-[#4B2E2E] mb-2">
+          {skill.icon}
+        </div>
+        <h3 className="text-xl font-bold text-[#4B2E2E]">{skill.title}</h3>
+      </div>
+
+      {/* Description */}
+      <div className="text-sm text-[#4B2E2E] text-justify leading-relaxed">
+        {skill.description.replace(/^"|"$/g, '')}
+      </div>
+
+      {/* Progress Bar */}
+      <div className="flex items-center gap-1 mt-4 w-full max-w-[270px]">
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={i}
+            className={`h-2 rounded-full flex-1 ${
+              i < skill.level / 20 ? 'bg-[#4B2E2E]' : 'bg-white'
+            } group-hover:bg-[#4B2E2E]`}
+          />
+        ))}
+      </div>
+    </motion.div>
+  ))}
 </div>
-   <p className="text-sm text-[#4B2E2E] mb-4 group-hover:text-[#4B2E2E]">
-     {skill.description}
-   </p>
-   <div className="flex items-center gap-1 mt-4">
-     {[...Array(5)].map((_, i) => (
-       <div
-         key={i}
-         className={`h-2 rounded-full flex-1 ${
-           i < skill.level / 20 ? 'bg-[#4B2E2E]' : 'bg-white'
-         } group-hover:bg-[#4B2E2E]`}
-       />
-     ))}
-   </div>
- </motion.div>
- 
-      ))}
-    </div>
+
         </motion.div>
       </div>
     </section>
