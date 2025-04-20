@@ -13,6 +13,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Reset Default Margins and Padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+#root {
+  width: 100%;
+}
+
 body {
   margin: 0;
   background-color: #F0E0D0;

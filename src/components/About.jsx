@@ -35,7 +35,7 @@ const About = () => {
             
             <div className="order-2 md:order-1 w-full md:w-11/12 text-[#4B2E2E] px-4 md:px-0">
              
-              <h2 className="text-7xl font-bold text-left text-[#4B2E2E] mb-8">
+              <h2 className="text-5xl font-bold text-left text-[#4B2E2E] mb-8">
                 About <span className="text-[#AF8362]">Me</span>
               </h2>
 
