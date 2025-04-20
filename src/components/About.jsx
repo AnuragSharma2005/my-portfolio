@@ -29,7 +29,7 @@ const About = () => {
                 }}
               >
                 <img
-                  src="/anurag.jpg"
+                  src="/my-portfolio/anurag.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                   style={{ borderRadius: '50%' }}

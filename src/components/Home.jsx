@@ -25,7 +25,7 @@ const Home = () => {
             }}
           >
             <img
-              src="/portfolio image.jpg"
+              src="/my-portfolio/portfolio-image.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
               style={{ borderRadius: '50%' }}
