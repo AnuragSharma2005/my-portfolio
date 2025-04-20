@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #F0E0D0;
+  color: #CCD6F6;
+}
+
+.nav-link {
+  @apply cursor-pointer hover:text-secondary transition-colors duration-300;
+}
+
+.section-heading {
+  @apply text-3xl md:text-4xl font-bold mb-8 text-lightText;
+}
+
+.button-primary {
+  @apply px-6 py-3 border-2 border-secondary text-secondary rounded hover:bg-secondary/10 transition-all duration-300;
+}
+
+.social-icon {
+  @apply text-2xl text-lightText hover:text-secondary transition-colors duration-300;
+}
