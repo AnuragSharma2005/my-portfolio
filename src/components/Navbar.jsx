@@ -61,7 +61,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="flex flex-col justify-center items-center absolute top-20 left-0 w-full  bg-[#4B2E2E] backdrop-blur-sm"
+          className="flex flex-col justify-center items-center absolute top-20 left-0 w-full bg-[#F0E0D0] backdrop-blur-sm"
         >
           {links.map(({ id, link }) => (
             <Link
@@ -70,7 +70,7 @@ const Navbar = () => {
               smooth
               duration={500}
               onClick={() => setNav(false)}
-              className="nav-link py-4 text-2xl capitalize"
+              className="nav-link py-4 text-2xl capitalize text-[#4B2E2E]"
             >
               {link}
             </Link>
