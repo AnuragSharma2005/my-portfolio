@@ -1,18 +1,38 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-  // Show toast if redirected after form submission
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('submitted') === 'true') {
-      toast.success('Email sent successfully!');
-      // Clean the URL so ?submitted=true doesn’t stay
-      window.history.replaceState({}, document.title, window.location.pathname);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+
+    try {
+      const res = await fetch('https://formsubmit.co/anuragwork2005@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (res.ok) {
+        toast.success('Email sent successfully!');
+        e.target.reset();
+      } else {
+        toast.error('Failed to send email. Please try again.');
+      }
+    } catch (error) {
+      toast.error('Something went wrong!');
+    } finally {
+      setIsSubmitting(false);
     }
-  }, []);
+  };
 
   return (
     <section id="contact" className="py-20 bg-[#F0E0D0]">
@@ -28,19 +48,9 @@ const Contact = () => {
           </h2>
 
           <div className="max-w-2xl mx-auto">
-            <form
-              action="https://formsubmit.co/anuragwork2005@gmail.com"
-              method="POST"
-              className="space-y-6"
-            >
-              {/* Required hidden inputs for FormSubmit */}
+            <form onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
-              <input
-                type="hidden"
-                name="_next"
-                value="http://localhost:5173/contact?submitted=true"
-              />
 
               <div className="flex gap-4">
                 <div className="w-1/2">
@@ -96,16 +106,20 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 rounded-lg bg-[#4B2E2E] text-white border-2 border-[#4B2E2E] hover:bg-transparent hover:text-[#4B2E2E] transition duration-300 ease-in-out"
+                disabled={isSubmitting}
+                className={`w-full px-6 py-3 rounded-lg font-semibold border-2 transition duration-300 ease-in-out ${
+                  isSubmitting
+                    ? 'bg-gray-400 text-white cursor-not-allowed'
+                    : 'bg-[#4B2E2E] text-white border-[#4B2E2E] hover:bg-transparent hover:text-[#4B2E2E]'
+                }`}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
         </motion.div>
       </div>
 
-      {/* ✅ Toast container */}
       <ToastContainer position="bottom-right" theme="dark" />
     </section>
   );
