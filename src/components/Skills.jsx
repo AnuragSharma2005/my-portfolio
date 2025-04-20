@@ -15,7 +15,7 @@ const skillCards = [
     title: 'Web Development',
     description: 'Full-stack development with modern frameworks and best practices',
     icon: <Code2 size={28} />,
-    color: 'bg-blue-600',
+    color: 'bg-[#AF8362]',
     level: 90,
   },
   {
@@ -23,7 +23,7 @@ const skillCards = [
     title: 'Frontend Development',
     description: 'Creating responsive and interactive user interfaces',
     icon: <Layout size={28} />,
-    color: 'bg-purple-600',
+    color: 'bg-[#AF8362]',
     level: 85,
   },
   {
@@ -31,7 +31,7 @@ const skillCards = [
     title: 'UI/UX Design',
     description: 'Designing intuitive and beautiful user experiences',
     icon: <PenTool size={28} />,
-    color: 'bg-pink-600',
+    color: 'bg-[#AF8362]',
     level: 80,
   },
   {
@@ -39,25 +39,10 @@ const skillCards = [
     title: 'Leadership',
     description: 'Team management and project coordination',
     icon: <Users size={28} />,
-    color: 'bg-green-600',
+    color: 'bg-[#AF8362]',
     level: 75,
   },
-  {
-    id: 5,
-    title: 'Management',
-    description: 'Strategic planning and resource optimization',
-    icon: <Settings size={28} />,
-    color: 'bg-yellow-600',
-    level: 70,
-  },
-  {
-    id: 6,
-    title: 'DevOps',
-    description: 'CI/CD pipelines and cloud infrastructure',
-    icon: <Server size={28} />,
-    color: 'bg-red-600',
-    level: 65,
-  },
+
 ];
 
 const Skills = () => {
@@ -70,36 +55,46 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-center mb-4">Professional Skills</h2>
-          <p className="text-center text-2xl text-[#AF8362] mb-12">
+          <h2 className="text-7xl font-bold text-center text-[#4B2E2E] mb-8">
+                MY <span className="text-[#AF8362]">Services</span>
+              </h2>
+          <p className="text-center text-2xl text-[#4B2E2E] mb-12">
             Crafting digital experiences with expertise and passion
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {skillCards.map((skill, index) => (
-              <motion.div
-                key={skill.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`rounded-2xl p-6 ${skill.color} relative overflow-hidden`}
-              >
-                <div className="mb-4 text-white">{skill.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
-                <p className="text-sm text-white/80 mb-4">{skill.description}</p>
-                <div className="flex items-center gap-1 mt-4">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className={`h-2 rounded-full flex-1 ${
-                        i < skill.level / 20 ? 'bg-white' : 'bg-white/30'
-                      }`}
-                    />
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+    <motion.div
+    key={skill.id}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    viewport={{ once: true }}
+    className={`group rounded-2xl p-6 ${skill.color} relative overflow-hidden h-72 
+                transition-all duration-300 
+                hover:bg-[#F0E0D0] hover:outline hover:outline-[#4B2E2E] hover:outline-2`}
+  >
+        <div className="mb-4 text-white group-hover:text-[#4B2E2E]">
+          {skill.icon}
+        </div>
+        <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-[#4B2E2E]">
+          {skill.title}
+        </h3>
+        <p className="text-sm text-white/80 mb-4 group-hover:text-[#4B2E2E]">
+          {skill.description}
+        </p>
+        <div className="flex items-center gap-1 mt-4">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className={`h-2 rounded-full flex-1 ${
+                i < skill.level / 20 ? 'bg-white' : 'bg-white/30'
+              } group-hover:bg-[#4B2E2E]`}
+            />
+          ))}
+        </div>
+      </motion.div>
+      ))}
+    </div>
         </motion.div>
       </div>
     </section>
@@ -107,3 +102,4 @@ const Skills = () => {
 };
 
 export default Skills;
+ 

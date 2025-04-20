@@ -8,12 +8,12 @@ import "slick-carousel/slick/slick-theme.css";
 const Achievements = () => {
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: true,   
     speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500, // scroll speed yahi se control hoti hai
+    autoplaySpeed: 1500, 
     arrows: true,
     pauseOnHover: true,
   };
@@ -27,9 +27,9 @@ const Achievements = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-<h2 className="section-heading mb-10" style={{ color: '#4B2E2E' }}>
- Achievements
-</h2>
+<h2 className="text-5xl font-bold text-center text-[#4B2E2E] mb-8">
+                MY <span className="text-[#AF8362]">Achievements</span>
+              </h2>
           <Slider {...settings}>
             {achievementsData.map((item, index) => (
               <div key={index} className="px-4">

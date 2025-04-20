@@ -11,7 +11,7 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row items-center gap-12"
         >
-          {/* Photo Section with top margin for spacing */}
+         
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -32,7 +32,7 @@ const Home = () => {
             />
           </motion.div>
 
-          {/* Text Section */}
+        
           <div className="text-left">
             <h2 className="text-[#4B2E2E] text-4xl mb-2">Hello, Myself</h2>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#4B2E2E] mb-4">

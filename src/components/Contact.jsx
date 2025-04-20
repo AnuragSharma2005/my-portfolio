@@ -36,24 +36,24 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-[#F0E0D0]">
-      <div className="max-w-screen-xl mx-auto px-4">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-heading mb-10" style={{ color: '#4B2E2E' }}>
-            Contact
+          <h2 className="text-5xl font-bold text-center text-[#4B2E2E] mb-8">
+            Contact <span className="text-[#AF8362]">Me</span>
           </h2>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="w-full max-w-2xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
 
-              <div className="flex gap-4">
-                <div className="w-1/2">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="w-full md:w-1/2">
                   <label className="block text-[#4B2E2E] mb-2">First Name</label>
                   <input
                     type="text"
@@ -62,7 +62,7 @@ const Contact = () => {
                     className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="w-full md:w-1/2">
                   <label className="block text-[#4B2E2E] mb-2">Last Name</label>
                   <input
                     type="text"
@@ -73,8 +73,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="w-1/2">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="w-full md:w-1/2">
                   <label className="block text-[#4B2E2E] mb-2">Email</label>
                   <input
                     type="email"
@@ -83,7 +83,7 @@ const Contact = () => {
                     className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="w-full md:w-1/2">
                   <label className="block text-[#4B2E2E] mb-2">Phone</label>
                   <input
                     type="tel"
@@ -109,7 +109,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className={`w-full px-6 py-3 rounded-lg font-semibold border-2 transition duration-300 ease-in-out ${
                   isSubmitting
-                    ? 'bg-gray-400 text-white cursor-not-allowed'
+                    ? 'bg-white text-[#4B2E2E] cursor-not-allowed'
                     : 'bg-[#4B2E2E] text-white border-[#4B2E2E] hover:bg-transparent hover:text-[#4B2E2E]'
                 }`}
               >

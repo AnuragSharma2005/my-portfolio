@@ -27,9 +27,9 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-<h2 className="section-heading mb-10" style={{ color: '#4B2E2E' }}>
-  Projects
-</h2>
+<h2 className="text-7xl font-bold text-center text-[#4B2E2E] mb-8">
+                MY <span className="text-[#AF8362]">projects</span>
+              </h2>
 <Slider {...settings}>
             {projectsData.map((project) => (
               <motion.div
