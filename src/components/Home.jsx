@@ -25,7 +25,7 @@ const Home = () => {
             }}
           >
             <img
-              src="/my-portfolio/portfolio-image.jpg"
+              src="/my-portfolio/portfolio%20image.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
               style={{ borderRadius: '50%' }}
@@ -58,7 +58,7 @@ const Home = () => {
             </p>
             <div className="flex gap-4">
             <a
-                 href="/Anu new resume.pdf"
+                 href="/Anu%20new%20resume.pdf"
                  className="px-6 py-3 bg-[#4B2E2E] text-white rounded-xl font-semibold hover:bg-[#4B2E2E] transition"
                  download
                 >
