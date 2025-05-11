@@ -27,7 +27,7 @@ const projectsData = [
     description: 'Built a job platform to connect users with nearby domestic service providers through location-based search.',
     technologies:['HTML','CSS','javaScript','React.js','Tailwind CSS','Google Maps API','Git','Payment Gateway'],
     github: 'https://github.com/281610/EasyHire3',
-    image: '/my-portfolio/public/image.png'
+    image: '/my-portfolio/image.png'
   },
   // {
   //   id: 3,
