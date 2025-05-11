@@ -21,6 +21,14 @@ const projectsData = [
     github: 'https://github.com/281610/PLUTO',
     image: 'https://raw.githubusercontent.com/281610/PLUTO/refs/heads/main/as6.jpg',
   },
+  {
+    id: 3,
+    title: 'EasyHire',
+    description: 'Built a job platform to connect users with nearby domestic service providers through location-based search.',
+    technologies:['HTML','CSS','javaScript','React.js','Tailwind CSS','Google Maps API','Git','Payment Gateway'],
+    github: 'https://github.com/281610/EasyHire3',
+    image: '/my-portfolio/public/image.png'
+  },
   // {
   //   id: 3,
   //   title: 'Todo Manager',
