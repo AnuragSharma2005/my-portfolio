@@ -42,19 +42,21 @@ const Achievements = () => {
       title: "Certifications and Milestones",
       description: (
         <div className="space-y-2">
-          <div><strong>Hackathon - HackIndia 2024:</strong> Built a smart app in 36 hrs.</div>
-          <div><strong>Hackathon - Hack-O-Octo:</strong> Solved real-time tech problem.</div>
-          <div><strong>PitchMasters:</strong> Pitched a startup idea to jury.</div>
-          <div><strong>Workshop - IPR & Patent Filing:</strong> Learned patent basics.</div>
+          <div><strong>Hackathon - HackIndia 2025</strong></div>
+          <div><strong>Hackathon - HackIndia 2024</strong></div>
+          <div><strong>Hackathon - Hack-O-Octo</strong></div>
+          <div><strong>PitchMasters:</strong></div>
+          <div><strong>Workshop - IPR & Patent Filing:</strong></div>
+          <div><strong>prize-Winner(IEEE Day)</strong></div>
         </div>
       ),
       image: "/my-portfolio/certificates.jpg",
     },
     {
-      title: "Prize Winner – IEEE Day Treasure Hunt",
+      title: "Unlocking the Future with AI – A Session by Dr. Ashok K. Chitkara",
       description:
-        "I was awarded a prize in the Treasure Hunt competition during the IEEE Day event organized by IEEE. This achievement highlights my strong problem-solving abilities, quick thinking, and effective teamwork.",
-      image: "/my-portfolio/IEEE.jpg",
+        "Heartfelt thanks to Dr. Ashok K. Chitkara for an enlightening 3-day session on Artificial Intelligence.His insights sparked deep interest and broadened our perspective on AI’s real-world impact and future potential.",
+      image: "/my-portfolio/WhatsApp Image 2025-05-11 at 23.51.25_afbd6e5d.jpg",
     },
   ];
 
