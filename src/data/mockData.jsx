@@ -4,8 +4,8 @@ export const aboutData = {
     {
       id: 1,
       degree: "B.Tech in Computer Science",
-      institution: "Delhi Technological University",
-      year: "2020-2024",
+      institution: "Chitkara University",
+      year: "2023-2027",
     },
   ],
 };
