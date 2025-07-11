@@ -25,7 +25,7 @@ const Home = () => {
             }}
           >
             <img
-              src="/my-portfolio/public/WhatsApp Image 2025-07-11 at 16.48.05_9af23cbe.jpg"
+              src="/my-portfolio/WhatsApp Image 2025-07-11 at 16.48.05_9af23cbe.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
               style={{ borderRadius: '50%' }}
