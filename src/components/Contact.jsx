@@ -35,38 +35,41 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#F0E0D0]">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-5xl font-bold text-center text-[#4B2E2E] mb-8">
-            Contact <span className="text-[#AF8362]">Me</span>
-          </h2>
+    <section id="contact" className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20 px-4 sm:px-6">
+      <div className="w-full flex justify-center">
+        <div className="bg-[#111827] rounded-3xl shadow-2xl px-6 sm:px-10 py-12 w-full max-w-[800px]">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+           
+            <h2 className="text-5xl font-bold text-center mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Get In Touch
+            </h2>
 
-          <div className="w-full max-w-2xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
 
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="w-full md:w-1/2">
-                  <label className="block text-[#4B2E2E] mb-2">First Name</label>
+                  <label className="block text-white mb-2">First Name</label>
                   <input
                     type="text"
                     name="First Name"
+                    placeholder='Your First name'
                     required
                     className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <label className="block text-[#4B2E2E] mb-2">Last Name</label>
+                  <label className="block text-white mb-2">Last Name</label>
                   <input
                     type="text"
                     name="Last Name"
+                    placeholder='Your Last Name'
                     required
                     className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
                   />
@@ -75,19 +78,21 @@ const Contact = () => {
 
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="w-full md:w-1/2">
-                  <label className="block text-[#4B2E2E] mb-2">Email</label>
+                  <label className="block text-white mb-2">Email</label>
                   <input
                     type="email"
                     name="Email"
+                    placeholder='Your Email'
                     required
                     className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <label className="block text-[#4B2E2E] mb-2">Phone</label>
+                  <label className="block text-white mb-2">Phone</label>
                   <input
                     type="tel"
                     name="Phone"
+                    placeholder='Your Contact Number'
                     required
                     className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
                   />
@@ -95,9 +100,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-[#4B2E2E] mb-2">Message</label>
+                <label className="block text-white mb-2">Message</label>
                 <textarea
                   name="Message"
+                  placeholder='Your Message'
                   rows="5"
                   required
                   className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
@@ -110,16 +116,16 @@ const Contact = () => {
                 className={`w-full px-6 py-3 rounded-lg font-semibold border-2 transition duration-300 ease-in-out ${
                   isSubmitting
                     ? 'bg-white text-[#4B2E2E] cursor-not-allowed'
-                    : 'bg-[#4B2E2E] text-white border-[#4B2E2E] hover:bg-transparent hover:text-[#4B2E2E]'
+                    : 'bg-gradient-to-r from-blue-600 to-cyan-300 text-white border-transparent hover:brightness-110'
                 }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
-            </form>
-          </div>
-        </motion.div>
-      </div>
 
+            </form>
+          </motion.div>
+        </div>
+      </div>
       <ToastContainer position="bottom-right" theme="dark" />
     </section>
   );

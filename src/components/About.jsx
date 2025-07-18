@@ -3,8 +3,8 @@ import { aboutData } from '../data/mockData';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-[#F0E0D0]">
-      <div className="max-w-screen-xl mx-auto px-4">
+    <section id="about" className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20 flex justify-center px-4">
+    <div className="w-full max-w-screen-xl bg-[#111827] rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] p-8 md:p-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -13,13 +13,14 @@ const About = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             
+            {/* Image */}
             <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center md:justify-end px-4 md:px-0">
               <div
                 className="w-full max-w-[320px] h-[380px] md:h-[440px] shadow-xl"
                 style={{
                   borderRadius: '50%',
-                  boxShadow: '0 25px 80px #4B2E2E',
-                  backgroundColor: '#4B2E2E',
+                  boxShadow: '0 25px 80px #3674B5',
+                  backgroundColor: '77BEF0',
                   padding: '10px',
                 }}
               >
@@ -32,14 +33,12 @@ const About = () => {
               </div>
             </div>
 
-            
-            <div className="order-2 md:order-1 w-full md:w-11/12 text-[#4B2E2E] px-4 md:px-0">
-             
-              <h2 className="text-5xl font-bold text-left text-[#4B2E2E] mb-8">
-                About <span className="text-[#AF8362]">Me</span>
+            {/* Text */}
+            <div className="order-2 md:order-1 w-full md:w-11/12 text-white px-4 md:px-0">
+           <h2 className="text-5xl font-bold  mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+               About Me
               </h2>
 
-        
               <p className="mb-4 text-justify">
                 Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
                 I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
@@ -51,11 +50,10 @@ const About = () => {
                 Thanks for visiting my portfolio!
               </p>
 
-            
-              <h3 className="text-5xl font-semibold text-[#4B2E2E] mb-4">Education</h3>
+              <h2 className="text-5xl font-bold  bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Education</h2>
               {aboutData.education.map((edu) => (
                 <div key={edu.id} className="mb-4">
-                  <h4 className="text-lg font-medium text-[#AF8362]">B.E(Computer Science)</h4>
+                  <h4 className="text-lg font-medium text-[77BEF0]">B.E(Computer Science)</h4>
                   <p>CHITKARA UNIVERSITY</p>
                   <p className="text-sm">2023-2027</p>
                 </div>

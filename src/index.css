@@ -34,6 +34,7 @@ body {
   margin: 0;
   background-color: #F0E0D0;
   color: #CCD6F6;
+   @apply bg-primary text-lightText;
 }
 
 .nav-link {

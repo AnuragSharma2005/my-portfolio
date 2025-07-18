@@ -1,112 +1,104 @@
-import { motion } from 'framer-motion';
-import {
-  Code2,
-  Layout,
-  PenTool,
-  Users,
-} from 'lucide-react'; // Icons
+"use client";
 
-const skillCards = [
-  {
-    id: 1,
-    title: 'Web Development',
-    description:
-      '"I specialize in creating dynamic and responsive websites that align with your unique needs. From visually stunning front-end designs to robust back-end development, I ensure your website delivers an exceptional experience on all devices. Whether its a sleek portfolio, an interactive blog, or a feature-rich eCommerce platform, I bring your vision to life. Let’s collaborate to build a web presence that stands out and makes an impact."',
-    icon: <Code2 size={28} />,
-    color: 'bg-[#F0E0D0]',
-    level: 90,
-  },
-  {
-    id: 2,
-    title: 'Frontend Development',
-    description:
-      '"As a Frontend Designer, I create clean, responsive, and intuitive interfaces that enhance user experience. From landing pages to interactive dashboards, I focus on designs that are both visually appealing and highly functional. Let’s bring your vision to life with seamless and engaging UI."',
-    icon: <Layout size={28} />,
-    color: 'bg-[#F0E0D0]',
-    level: 85,
-  },
-  {
-    id: 3,
-    title: 'UI/UX Design',
-    description:
-      '"As a UI/UX Designer, I focus on making websites and apps that are both beautiful and easy to use. I start by understanding what users want and how they interact with technology. Then I create simple sketches and layouts (called wireframes) to plan how everything should look and work. After that, I design the final version with colors, buttons, and visuals that are clean and user-friendly."',
-    icon: <PenTool size={28} />,
-    color: 'bg-[#F0E0D0]',
-    level: 80,
-  },
-  {
-    id: 4,
-    title: 'Leadership',
-    description:
-      '"As a leader, I enjoy managing teams and organizing events from start to finish. I make sure everyone works well together and stays on track to reach our goals. I focus on good planning, clear communication, and keeping things running smoothly. Whether it’s handling tasks, solving problems, or supporting my team, I always aim to make the event or project a success."',
-    icon: <Users size={28} />,
-    color: 'bg-[#F0E0D0]',
-    level: 75,
-  },
+import { useRef, useState, useEffect } from "react";
+import {
+  Code,
+  Globe,
+  Zap,
+  Layers,
+  GitBranch,
+  Monitor,
+  Database,
+  Palette,
+} from "lucide-react";
+
+const skills = [
+  { name: "JavaScript", icon: Code, color: "from-yellow-400 to-orange-500" },
+  { name: "React", icon: Globe, color: "from-blue-400 to-cyan-500" },
+  { name: "Css", icon: Palette, color: "from-gray-700 to-gray-900" },
+  { name: "Node.js", icon: Zap, color: "from-green-400 to-emerald-500" },
+  { name: "HTML", icon: Code, color: "from-blue-600 to-indigo-700" },
+  { name: "MongoDB", icon: Database, color: "from-green-500 to-teal-600" },
+  { name: "C/C++", icon: Database, color: "from-blue-500 to-purple-600" },
+  { name: "Tailwind CSS", icon: Palette, color: "from-cyan-400 to-blue-500" },
+  { name: "Express.js", icon: Layers, color: "from-gray-600 to-gray-800" },
+  { name: "Git & GitHub", icon: GitBranch, color: "from-orange-500 to-red-500" },
+  { name: "Python", icon: Code, color: "from-blue-500 to-yellow-500" },
+  { name: "Java", icon: Globe, color: "from-green-400 to-green-600" },
 ];
 
-const Skills = () => {
+export default function SkillsAnimated() {
+  const [visibleSkills, setVisibleSkills] = useState([]);
+  const skillsRef = useRef(null);
+  const timeoutsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setVisibleSkills([]);
+          timeoutsRef.current.forEach(clearTimeout); // Clear any old timeouts
+
+          skills.forEach((_, index) => {
+            const timeout = setTimeout(() => {
+              setVisibleSkills((prev) => [...prev, index]);
+            }, index * 200);
+            timeoutsRef.current.push(timeout);
+          });
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const ref = skillsRef.current;
+    if (ref) observer.observe(ref);
+
+    return () => {
+      observer.disconnect();
+      timeoutsRef.current.forEach(clearTimeout);
+    };
+  }, []);
+
   return (
-    <section id="skills" className="py-20 bg-white text-[#4B2E2E]">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-7xl font-bold text-center text-[#4B2E2E] mb-8">
-            MY <span className="text-[#AF8362]">Services</span>
+    <section
+      ref={skillsRef}
+      id="skills"
+      className="py-20 min-h-screen bg-gradient-to-r from-blue-800/20 to-indigo-800/20 text-white flex justify-center items-center px-4"
+    >
+      <div className="w-full max-w-7xl rounded-3xl bg-[#111827] shadow-2xl shadow-blue-500/20 mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
+        <div className="text-center mb-14">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            My Skills
           </h2>
+          <p className="text-gray-300 mt-4 text-lg">
+            Technologies and tools I work with to bring ideas to life
+          </p>
+        </div>
 
-          {/* Updated layout */}
-          <div className="flex flex-col gap-6 md:flex-row md:justify-between">
-            {skillCards.map((skill, index) => (
-              <motion.div
-                key={skill.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`group rounded-2xl p-6 ${skill.color} w-full md:w-[30%] 
-                  flex flex-col justify-start transition-all duration-300 
-                  hover:bg-[#F0E0D0] hover:outline hover:outline-[#4B2E2E] hover:outline-2`}
-              >
-                {/* Icon + Title */}
-                <div className="text-center mb-4">
-                  <div className="inline-block text-[#4B2E2E] mb-2">
-                    {skill.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-[#4B2E2E]">
-                    {skill.title}
-                  </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className={`transform transition duration-500 ease-in-out ${
+                visibleSkills.includes(index)
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 flex flex-col items-center justify-center text-center hover:scale-105 hover:border-white/20 transition-all duration-300 cursor-pointer">
+                <div
+                  className={`w-16 h-16 mb-4 rounded-full bg-gradient-to-r ${skill.color} flex items-center justify-center shadow-lg`}
+                >
+                  <skill.icon className="w-8 h-8 text-white" />
                 </div>
-
-                {/* Description */}
-                <div className="text-sm text-[#4B2E2E] text-justify leading-relaxed">
-                  {skill.description.replace(/^"|"$/g, '')}
-                </div>
-
-                {/* Progress Bar */}
-                <div className="flex items-center gap-1 mt-4 w-full max-w-[270px]">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className={`h-2 rounded-full flex-1 ${
-                        i < skill.level / 20
-                          ? 'bg-[#4B2E2E]'
-                          : 'bg-white'
-                      } group-hover:bg-[#4B2E2E]`}
-                    />
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                <p className="font-medium text-white text-sm">{skill.name}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
-
-export default Skills;
+}
