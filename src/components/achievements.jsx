@@ -36,7 +36,7 @@ const Achievements = () => {
       title: "Core Member (CEED)",
       description:
         "As a core member of the CEED Startup Club (Chitkara University), I help organize and execute events that promote innovation, entrepreneurship, and collaboration among students, fostering a dynamic platform for young entrepreneurs to thrive.",
-      image: "/my-portfolio/jazba.jpg",
+      image: "/jazba.jpg",
     },
     {
       title: "Certifications and Milestones",
@@ -50,13 +50,13 @@ const Achievements = () => {
           <div><strong>prize-Winner(IEEE Day)</strong></div>
         </div>
       ),
-      image: "/my-portfolio/certificates.jpg",
+      image: "/certificates.jpg",
     },
     {
       title: "Unlocking the Future with AI – A Session by Dr. Ashok K. Chitkara",
       description:
         "Heartfelt thanks to Dr. Ashok K. Chitkara for an enlightening 3-day session on Artificial Intelligence.His insights sparked deep interest and broadened our perspective on AI’s real-world impact and future potential.",
-      image: "/my-portfolio/WhatsApp Image 2025-05-11 at 23.51.25_afbd6e5d.jpg",
+      image: "/WhatsApp Image 2025-05-11 at 23.51.25_afbd6e5d.jpg",
     },
   ];
 

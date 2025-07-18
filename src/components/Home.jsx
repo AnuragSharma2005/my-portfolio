@@ -26,7 +26,7 @@ const Home = () => {
 
         <div className="relative w-full h-full overflow-hidden rounded-full">
           <img
-            src="/my-portfolio/WhatsApp Image 2025-07-11 at 16.48.05_9af23cbe.jpg"
+            src="/WhatsApp Image 2025-07-11 at 16.48.05_9af23cbe.jpg"
             alt="Profile"
             className="w-full h-full object-cover rounded-full"
           />

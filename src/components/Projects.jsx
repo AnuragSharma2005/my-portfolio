@@ -9,7 +9,7 @@ const projectsData = [
     technologies: ['React', 'Node.js', 'MongoDB'],
     github: 'https://github.com/281610/QuickBites4',
     liveDemo: '',
-    image: '/my-portfolio/quickbites.jpg',
+    image: '/quickbites.jpg',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const projectsData = [
     technologies: ['HTML', 'CSS', 'javaScript', 'React.js', 'Tailwind CSS', 'Google Maps API', 'Git', 'Payment Gateway'],
     github: 'https://github.com/281610/EasyHire3',
     liveDemo: '',
-    image: '/my-portfolio/image.png',
+    image: '/image.png',
   },
 ];
 
