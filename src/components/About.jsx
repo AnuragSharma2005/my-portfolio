@@ -39,16 +39,17 @@ const About = () => {
                About Me
               </h2>
 
-              <p className="mb-4 text-justify">
-                Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
-                I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
-                With experience in both front-end and back-end technologies, I strive to build applications that are not only functional but also deliver a smooth user experience.
-                My technical skills include proficiency in HTML, CSS, JavaScript, and various frameworks and libraries, enabling me to build responsive and interactive websites.
-                Beyond coding, I’m actively involved in CEED – Chitkara University’s Startup Club, where I serve as a core member of the Event Management Team.
-                There, I contribute to organizing and executing events that promote innovation, entrepreneurship, and collaboration among students.
-                I love working with people, whether it’s through tech or events, and I’m always looking to grow, learn, and make meaningful contributions.
-                Thanks for visiting my portfolio!
-              </p>
+            <p className="mb-4 text-justify">
+              Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
+              I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
+              With experience in both front-end and back-end technologies, I strive to build applications that are not only functional but also deliver a smooth user experience.
+              My technical skills include proficiency in HTML, CSS, JavaScript, and various frameworks and libraries, enabling me to build responsive and interactive websites.
+              Beyond coding, I’m actively involved in CEED – Chitkara University’s Startup Club, where I serve as a core member of the Event Management Team.
+              There, I contribute to organizing and executing events that promote innovation, entrepreneurship, and collaboration among students.
+              I love working with people, whether it’s through tech or events, and I’m always looking to grow, learn, and make meaningful contributions.
+              Thanks for visiting my portfolio!
+            </p>
+
 
               <h2 className="text-5xl font-bold  bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Education</h2>
               {aboutData.education.map((edu) => (

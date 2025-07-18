@@ -110,17 +110,21 @@ const Contact = () => {
                 ></textarea>
               </div>
 
+            <div className="flex justify-center">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-6 py-3 rounded-lg font-semibold border-2 transition duration-300 ease-in-out ${
+                className={`w-1/2 px-5 py-3 text-sm sm:text-base rounded-3xl font-semibold transition hover:brightness-110 ${
                   isSubmitting
                     ? 'bg-white text-[#4B2E2E] cursor-not-allowed'
-                    : 'bg-gradient-to-r from-blue-600 to-cyan-300 text-white border-transparent hover:brightness-110'
+                    : 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white'
                 }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+            </div>
+
+
 
             </form>
           </motion.div>
