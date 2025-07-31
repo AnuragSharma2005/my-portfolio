@@ -62,8 +62,8 @@ const Home = () => {
         </p>
         <div className="flex gap-4">
           <a
-            href="/my-portfolio/my%20portfolio%20resume.pdf"
-            className="px-5 py-3 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-3xl font-semibold transition hover:brightness-110"
+            href="/anurag-resume.pdf"
+            className="px-5 py-3 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-3xl font-semibold transition cursor-hover p-6 hover:brightness-110"
             download
           >
             Download Resume
@@ -71,16 +71,16 @@ const Home = () => {
          <div className="inline-block rounded-3xl p-[2px] bg-gradient-to-r from-blue-600 to-cyan-500">
             <a
               href="#contact"
-              className="block px-5 py-3 text-sm sm:text-base rounded-3xl font-semibold text-white bg-[#0e0f1a]/80 hover:brightness-110"
+              className="block px-5 py-3 text-sm sm:text-base rounded-3xl cursor-hover p-6  font-semibold text-white bg-[#0e0f1a]/80 hover:brightness-110"
             >
               Get In Touch
             </a>
           </div>
         </div>
 
-  <div className="max-w-screen-xl mx-auto px-4 mt-10">
-  <div className="flex flex-col items-start gap-4">
-    <div className="flex gap-6">
+      <div className="max-w-screen-xl mx-auto px-4 mt-10 ">
+      <div className="flex flex-col items-start gap-4">
+        <div className="flex gap-6">
             <a
               href="https://github.com/AnuragSharma2005"
               target="_blank"

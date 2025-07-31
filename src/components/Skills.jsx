@@ -66,7 +66,7 @@ export default function SkillsAnimated() {
       id="skills"
       className="py-20 min-h-screen bg-gradient-to-r from-blue-800/20 to-indigo-800/20 text-white flex justify-center items-center px-4"
     >
-      <div className="w-full max-w-7xl rounded-3xl bg-[#111827] shadow-2xl shadow-blue-500/20 mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
+      <div className="w-full max-w-7xl rounded-3xl bg-[#111827] shadow-2xl shadow-blue-500/20 mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12 cursor-hover p-6 ">
         <div className="text-center mb-14">
           <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             My Skills
