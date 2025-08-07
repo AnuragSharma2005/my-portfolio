@@ -66,7 +66,7 @@ export default function Services() {
   return (
     <section
       ref={servicesRef}
-      id="about"
+      id="Services"
       className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20 flex justify-center px-4 cursor-pointer"
     >
       <div className="w-full max-w-screen-xl bg-[#111827] rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] p-8 md:p-12">
