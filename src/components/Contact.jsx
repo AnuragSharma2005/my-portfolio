@@ -61,8 +61,7 @@ const Contact = () => {
                     name="First Name"
                     placeholder='Your First name'
                     required
-                    className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
-                  />
+                    className="w-full bg-gray-800 text-white placeholder-white/70 p-3 rounded-lg border border-white/40 focus:outline-none focus:ring-2 focus:ring-white"                  />
                 </div>
                 <div className="w-full md:w-1/2">
                   <label className="block text-white mb-2">Last Name</label>
@@ -71,8 +70,7 @@ const Contact = () => {
                     name="Last Name"
                     placeholder='Your Last Name'
                     required
-                    className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
-                  />
+                  className="w-full bg-gray-800 text-white placeholder-white/70 p-3 rounded-lg border border-white/40 focus:outline-none focus:ring-2 focus:ring-white"                  />
                 </div>
               </div>
 
@@ -84,8 +82,7 @@ const Contact = () => {
                     name="Email"
                     placeholder='Your Email'
                     required
-                    className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
-                  />
+                className="w-full bg-gray-800 text-white placeholder-white/70 p-3 rounded-lg border border-white/40 focus:outline-none focus:ring-2 focus:ring-white"                  />
                 </div>
                 <div className="w-full md:w-1/2">
                   <label className="block text-white mb-2">Phone</label>
@@ -94,8 +91,7 @@ const Contact = () => {
                     name="Phone"
                     placeholder='Your Contact Number'
                     required
-                    className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
-                  />
+                  className="w-full bg-gray-800 text-white placeholder-white/70 p-3 rounded-lg border border-white/40 focus:outline-none focus:ring-2 focus:ring-white"                  />
                 </div>
               </div>
 
@@ -106,8 +102,7 @@ const Contact = () => {
                   placeholder='Your Message'
                   rows="5"
                   required
-                  className="w-full bg-white text-[#4B2E2E] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4B2E2E]"
-                ></textarea>
+                className="w-full bg-gray-800 text-white placeholder-white/70 p-3 rounded-lg border border-white/40 focus:outline-none focus:ring-2 focus:ring-white"                ></textarea>
               </div>
 
             <div className="flex justify-center ">
