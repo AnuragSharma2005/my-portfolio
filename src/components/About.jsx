@@ -47,14 +47,15 @@ const About = () => {
   <p className="text-base sm:text-lg text-gray-300 
                 text-center md:text-justify 
                 leading-relaxed tracking-wide">
-    Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
+    {/* Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
     I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
     With experience in both front-end and back-end technologies, I strive to build applications that are not only functional but also deliver a smooth user experience.
     My technical skills include proficiency in HTML, CSS, JavaScript, and various frameworks and libraries, enabling me to build responsive and interactive websites.
     Beyond coding, I’m actively involved in CEED – Chitkara University’s Startup Club, where I serve as a core member of the Event Management Team.
     There, I contribute to organizing and executing events that promote innovation, entrepreneurship, and collaboration among students.
     I love working with people, whether it’s through tech or events, and I’m always looking to grow, learn, and make meaningful contributions.
-    Thanks for visiting my portfolio!
+    Thanks for visiting my portfolio! */}
+    Anurag Sharma 
   </p>
 
   {/* Education Heading */}
