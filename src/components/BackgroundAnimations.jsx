@@ -1,11 +1,11 @@
 // src/components/AnimatedBackground.jsx
-import React from "react";
+import React from "react"; 
 
 const BackgroundAnimations = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
       {/* Big soft white glowing orbs */}
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute -twhop-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute top-40 -left-40 w-60 h-60 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000" />
       <div className="absolute bottom-40 right-20 w-40 h-40 bg-white/15 rounded-full blur-2xl animate-bounce" />
       <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-ping" />
