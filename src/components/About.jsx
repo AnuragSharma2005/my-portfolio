@@ -34,32 +34,46 @@ const About = () => {
             </div>
 
             {/* Text */}
-            <div className="order-2 md:order-1 w-full md:w-11/12 text-white px-4 md:px-0">
-           <h2 className="text-5xl font-bold  mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-               About Me
-              </h2>
+           {/* Text */}
+<div className="order-2 md:order-1 w-full md:w-11/12 text-white px-2 sm:px-4 md:px-0 flex flex-col space-y-6">
 
-            <p className="mb-4 text-justify">
-              Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
-              I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
-              With experience in both front-end and back-end technologies, I strive to build applications that are not only functional but also deliver a smooth user experience.
-              My technical skills include proficiency in HTML, CSS, JavaScript, and various frameworks and libraries, enabling me to build responsive and interactive websites.
-              Beyond coding, I’m actively involved in CEED – Chitkara University’s Startup Club, where I serve as a core member of the Event Management Team.
-              There, I contribute to organizing and executing events that promote innovation, entrepreneurship, and collaboration among students.
-              I love working with people, whether it’s through tech or events, and I’m always looking to grow, learn, and make meaningful contributions.
-              Thanks for visiting my portfolio!
-            </p>
+  {/* About Heading */}
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold 
+                 bg-gradient-to-r from-blue-400 to-cyan-400 
+                 bg-clip-text text-transparent text-center md:text-left">
+    About Me
+  </h2>
 
+  <p className="text-base sm:text-lg text-gray-300 
+                text-center md:text-justify 
+                leading-relaxed tracking-wide">
+    Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
+    I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
+    With experience in both front-end and back-end technologies, I strive to build applications that are not only functional but also deliver a smooth user experience.
+    My technical skills include proficiency in HTML, CSS, JavaScript, and various frameworks and libraries, enabling me to build responsive and interactive websites.
+    Beyond coding, I’m actively involved in CEED – Chitkara University’s Startup Club, where I serve as a core member of the Event Management Team.
+    There, I contribute to organizing and executing events that promote innovation, entrepreneurship, and collaboration among students.
+    I love working with people, whether it’s through tech or events, and I’m always looking to grow, learn, and make meaningful contributions.
+    Thanks for visiting my portfolio!
+  </p>
 
-              <h2 className="text-5xl font-bold  bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Education</h2>
-              {aboutData.education.map((edu) => (
-                <div key={edu.id} className="mb-4">
-                  <h4 className="text-lg font-medium text-[77BEF0]">B.E(Computer Science)</h4>
-                  <p>CHITKARA UNIVERSITY</p>
-                  <p className="text-sm">2023-2027</p>
-                </div>
-              ))}
-            </div>
+  {/* Education Heading */}
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold 
+                 bg-gradient-to-r from-blue-400 to-cyan-400 
+                 bg-clip-text text-transparent text-center md:text-left">
+    Education
+  </h2>
+
+  <div className="flex flex-col items-center md:items-start space-y-4">
+    {aboutData.education.map((edu) => (
+      <div key={edu.id} className="text-center md:text-left">
+        <h4 className="text-lg font-medium text-[#77BEF0]">{edu.degree}</h4>
+        <p className="text-gray-300">{edu.institution}</p>
+        <p className="text-sm text-gray-400">{edu.year}</p>
+      </div>
+    ))}
+  </div>
+</div>
           </div>
         </motion.div>
       </div>
