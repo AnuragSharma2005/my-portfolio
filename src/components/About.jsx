@@ -4,7 +4,7 @@ import { aboutData } from '../data/mockData';
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20 flex justify-center px-4">
-    <div className="w-full max-w-screen-xl bg-[#111827] rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] p-8 md:p-12">
+      <div className="w-full max-w-screen-xl bg-[#111827] rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] p-8 md:p-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,47 +34,43 @@ const About = () => {
             </div>
 
             {/* Text */}
-           {/* Text */}
-<div className="order-2 md:order-1 w-full md:w-11/12 text-white px-2 sm:px-4 md:px-0 flex flex-col space-y-6">
+            <div className="order-2 md:order-1 w-full md:w-11/12 text-white px-2 sm:px-4 md:px-0 flex flex-col space-y-6">
 
-  {/* About Heading */}
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold 
-                 bg-gradient-to-r from-blue-400 to-cyan-400 
-                 bg-clip-text text-transparent text-center md:text-left">
-    About Me
-  </h2>
+              {/* About Heading */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold 
+                             bg-gradient-to-r from-blue-400 to-cyan-400 
+                             bg-clip-text text-transparent text-center md:text-left">
+                About Me
+              </h2>
 
-  <p className="text-base sm:text-lg text-gray-300 
-                text-center md:text-justify 
-                leading-relaxed tracking-wide">
-    {/* Hi, I'm Anurag Sharma, a passionate full-stack developer currently pursuing my B.E. in Computer Science at Chitkara University.
-    I enjoy turning ideas into real-world digital solutions through clean, efficient, and user-friendly code.
-    With experience in both front-end and back-end technologies, I strive to build applications that are not only functional but also deliver a smooth user experience.
-    My technical skills include proficiency in HTML, CSS, JavaScript, and various frameworks and libraries, enabling me to build responsive and interactive websites.
-    Beyond coding, I’m actively involved in CEED – Chitkara University’s Startup Club, where I serve as a core member of the Event Management Team.
-    There, I contribute to organizing and executing events that promote innovation, entrepreneurship, and collaboration among students.
-    I love working with people, whether it’s through tech or events, and I’m always looking to grow, learn, and make meaningful contributions.
-    Thanks for visiting my portfolio! */}
-    Anurag Sharma 
-  </p>
+              <p className="text-base sm:text-lg text-gray-300 
+                            text-center md:text-justify 
+                            leading-relaxed tracking-wide">
+                Hi, I’m Anurag Sharma, a passionate Full-Stack Developer and Computer Science student at Chitkara University.
+                I specialize in transforming complex ideas into scalable, efficient, and user-centric digital solutions that create real impact.
+                <br /><br />
+                As a core member of CEED – Chitkara’s Startup Club, I actively contribute to planning and managing events that foster innovation, entrepreneurship, and collaboration within the student community.
+                <br /><br />
+                I thrive on continuous learning and enjoy working at the intersection of technology, creativity, and problem-solving—always seeking opportunities to build, innovate, and inspire. 🚀
+              </p>
 
-  {/* Education Heading */}
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold 
-                 bg-gradient-to-r from-blue-400 to-cyan-400 
-                 bg-clip-text text-transparent text-center md:text-left">
-    Education
-  </h2>
+              {/* Education Heading */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold 
+                             bg-gradient-to-r from-blue-400 to-cyan-400 
+                             bg-clip-text text-transparent text-center md:text-left">
+                Education
+              </h2>
 
-  <div className="flex flex-col items-center md:items-start space-y-4">
-    {aboutData.education.map((edu) => (
-      <div key={edu.id} className="text-center md:text-left">
-        <h4 className="text-lg font-medium text-[#77BEF0]">{edu.degree}</h4>
-        <p className="text-gray-300">{edu.institution}</p>
-        <p className="text-sm text-gray-400">{edu.year}</p>
-      </div>
-    ))}
-  </div>
-</div>
+              <div className="flex flex-col items-center md:items-start space-y-4">
+                {aboutData.education.map((edu) => (
+                  <div key={edu.id} className="text-center md:text-left">
+                    <h4 className="text-lg font-medium text-[#77BEF0]">{edu.degree}</h4>
+                    <p className="text-gray-300">{edu.institution}</p>
+                    <p className="text-sm text-gray-400">{edu.year}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
