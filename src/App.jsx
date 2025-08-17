@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Services from "./components/Services";
 // import Achievements from './components/achievements';
 import Projects from './components/Projects';
+import Experience from "./components/Experience";
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -26,6 +27,7 @@ function App() {
       <Skills />
       <Services />
       <Projects />
+      <Experience />
       {/* <Achievements />  */}
       <Contact />
       <Footer />
