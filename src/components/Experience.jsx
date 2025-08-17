@@ -92,14 +92,17 @@ const Projects = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                       <p className="text-purple-300 font-medium mb-2">{project.category}</p>
-                      <p className="text-gray-300 mb-4">{project.description}</p>
+                      <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4 text-left sm:text-justify">
+  {project.description}
+</p>
+
 
                       {/* Technologies */}
                       <div className="flex flex-wrap gap-2 mb-6">
                         {project.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 text-xs rounded-full bg-purple-600/20 text-purple-300 border border-purple-500/30"
+                             className="px-4 py-1 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white text-sm transition"
                           >
                             {tech}
                           </span>
@@ -115,7 +118,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="px-5 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-sm transition flex items-center gap-2"
                       >
-                        <FaExternalLinkAlt /> Live Server
+                        <FaExternalLinkAlt /> Live 
                       </a>
                       <a
                         href={project.github}
