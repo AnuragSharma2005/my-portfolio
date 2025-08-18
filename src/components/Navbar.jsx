@@ -12,7 +12,8 @@ const Navbar = () => {
     { id: 3, link: 'skills' },
     { id: 4, link: 'Services' },
     { id: 5, link: 'projects' },
-    { id: 6, link: 'contact' },
+    { id: 6, link: 'Experience' },
+    { id: 7, link: 'contact' },
   ];
 
   return (

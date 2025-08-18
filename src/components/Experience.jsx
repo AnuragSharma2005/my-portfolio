@@ -33,7 +33,7 @@ const Projects = () => {
 
   return (
     <div className="px-4 sm:px-6 md:px-0">
-      <section id="projects" className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20">
+      <section id="Experience" className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20">
         <div className="w-full max-w-6xl rounded-3xl bg-[#111827] shadow-2xl shadow-purple-500/20 mx-auto px-6 py-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
