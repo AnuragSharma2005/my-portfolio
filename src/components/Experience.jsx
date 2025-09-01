@@ -25,7 +25,7 @@ const Projects = () => {
         "Independently developed the upcoming landing platform for RefBoosts, a referral-matching marketplace aimed at connecting fresh talent with seasoned professionals. Designed a sleek Coming Soon page with clean, responsive layout and engaging visuals—setting a solid foundation for future platform expansion..",
       technologies: ["React.js", "Tailwind CSS", "Vercel", "git-hub", "Framer Motion", "supabase","Herox Hosting",],
       github: "https://github.com/AnuragSharma2005/refboosts",
-      liveDemo: "https://refboosts.com/",
+      liveDemo: "https://refboosts.vercel.app/",
     //   moreInfo: "#",
       image: "Exp2logo.png",
     },
