@@ -15,8 +15,7 @@ const projectsData = [
   {
     id: 2,
     title: "Weather Forecast",
-    description:
-      "Your digital window to the skies — see what the weather’s whispering today and tomorrow.",
+    description:"Voiceshop is an e-commerce platform offering fashion for all ages, daily essentials, and pharmacy products in one seamless shopping experience.",
     technologies: ["HTML", "CSS", "Javascript"],
     github: "https://github.com/AnuragSharma2005/shopping",
     liveDemo: "https://voiceshop.vercel.app/",
