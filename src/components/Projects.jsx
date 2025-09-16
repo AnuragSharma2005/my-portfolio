@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projectsData = [
   {
@@ -9,7 +9,7 @@ const projectsData = [
       "A food delivery platform that connects users with local home-cooked meals.",
     technologies: ["React", "Node.js", "MongoDB"],
     github: "https://github.com/281610/QuickBites4",
-    liveDemo: "",
+    liveDemo: "https://quick-bites-final.vercel.app/",
     image: "/quickbites.jpg",
   },
   {
@@ -18,10 +18,10 @@ const projectsData = [
     description:
       "Your digital window to the skies — see what the weather’s whispering today and tomorrow.",
     technologies: ["HTML", "CSS", "Javascript"],
-    github: "https://github.com/281610/PLUTO",
-    liveDemo: "",
+    github: "https://github.com/AnuragSharma2005/shopping",
+    liveDemo: "https://voiceshop.vercel.app/",
     image:
-      "https://raw.githubusercontent.com/281610/PLUTO/refs/heads/main/as6.jpg",
+      "/voice.png",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const projectsData = [
     technologies: [
       "HTML",
       "CSS",
-      "javaScript",
+      "JavaScript",
       "React.js",
       "Tailwind CSS",
       "Google Maps API",
@@ -46,12 +46,12 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <div className="px-4 sm:px-6 md:px-0 ">
+    <div className="px-4 sm:px-6 md:px-0">
       <section
         id="projects"
         className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20"
       >
-        <div className="w-full max-w-7xl rounded-3xl bg-[#111827] shadow-2xl shadow-blue-500/20 mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12 cursor-hover p-6 ">
+        <div className="w-full max-w-7xl rounded-3xl bg-[#111827] shadow-2xl shadow-blue-500/20 mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12 cursor-hover p-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,6 +77,7 @@ const Projects = () => {
                   }}
                   className="bg-gradient-to-r from-blue-800/20 to-indigo-800/20 rounded-lg overflow-hidden shadow-md flex flex-col justify-between hover:shadow-2xl hover:shadow-blue-500/40 cursor-pointer"
                 >
+                  {/* Image + Overlay */}
                   <div className="relative group w-full h-48 sm:h-56 overflow-hidden rounded-t-lg">
                     <img
                       src={project.image}
@@ -85,7 +86,7 @@ const Projects = () => {
                     />
 
                     {/* Blur overlay on hover */}
-                    <div className="absolute inset-0 bg-blue-500/30 backdrop-blur-md opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-blue-500/30 backdrop-blur-md opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center gap-4">
                       <a
                         href={project.github}
                         target="_blank"
@@ -94,9 +95,20 @@ const Projects = () => {
                       >
                         <FaGithub size={30} />
                       </a>
+                      {project.liveDemo && (
+                        <a
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white"
+                        >
+                          <FaExternalLinkAlt size={30} />
+                        </a>
+                      )}
                     </div>
                   </div>
 
+                  {/* Content */}
                   <div className="p-4 flex flex-col gap-2 flex-1">
                     <h3 className="text-lg font-semibold text-white">
                       {project.title}
