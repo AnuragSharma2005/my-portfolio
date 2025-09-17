@@ -14,7 +14,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Weather Forecast",
+    title: "Ecommerce Website",
     description:"Voiceshop is an e-commerce platform offering fashion for all ages, daily essentials, and pharmacy products in one seamless shopping experience.",
     technologies: ["HTML", "CSS", "Javascript"],
     github: "https://github.com/AnuragSharma2005/shopping",
