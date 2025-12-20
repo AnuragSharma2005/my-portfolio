@@ -40,137 +40,169 @@ const experiences = [
     image: "/Exp2logo.png",
   },
   {
-  id: 2,
-  title: "Blueberry Fields School – Official Website",
-  category: "Full-Stack Web Developer (Client Project)",
-  description:
-    "Developed a modern, responsive website for Blueberry Fields School to enhance its digital presence and communication with parents and students. Implemented a clean UI with smooth navigation, admission inquiry forms, and dynamic content management. Delivered complete deployment with domain integration and hosting setup.",
-  technologies: [
-    "React",
-    "Tailwind CSS",
-    "Framer Motion",
-    "Vercel",
-    "Git/GitHub",
-    "Cloudinary",
-    "Admin Pannel",
-  ],
-  github: "https://github.com/adityasharma0903/blueberry-fields",
-  liveDemo: "https://blueberryfieldsschool.com/",
-  image: "/blueberry.jpg",
-},
+    id: 3,
+    title: "Blueberry Fields School – Official Website",
+    category: "Full-Stack Web Developer (Client Project)",
+    description:
+      "Developed a modern, responsive website for Blueberry Fields School to enhance its digital presence and communication with parents and students. Implemented a clean UI with smooth navigation, admission inquiry forms, and dynamic content management. Delivered complete deployment with domain integration and hosting setup.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vercel",
+      "Git/GitHub",
+      "Cloudinary",
+      "Admin Panel",
+    ],
+    github: "https://github.com/adityasharma0903/blueberry-fields",
+    liveDemo: "https://blueberryfieldsschool.com/",
+    image: "/blueberry.jpg",
+  },
+  {
+    id: 4,
+    title: "E-Commerce Platform - Livique ",
+    category: "Full-Stack Web Developer (Client Project)",
+    description:
+      "Designed and developed a full-stack e-commerce platform tailored for the Home Décor, Beauty, and Gift Items market. The application features a scalable architecture with modular frontend components and a secure backend. Implemented dynamic product listings, category-based filtering, cart and checkout workflows, and role-based access control for admin and vendors. Integrated secure authentication, image optimization, and cloud-based asset management to ensure high performance and smooth user experience. The platform is optimized for responsiveness, SEO, and future scalability, making it suitable for growing online retail businesses.",
+    technologies: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Cloudinary",
+      "JWT Auth",
+      "passport.js",
+      "Google Cloud",
+      "Express.js",
+      "Postman",
+      "APIs",
+      
+    ],
+    github: "https://github.com/Moksh-Digital/Livique",
+    liveDemo: "https://www.livique.co.in/",
+    image: "/image-5.png",
+  },
 ]
 
 const Experience = () => {
   return (
     <div id="Experience" className="px-4 sm:px-6 md:px-0">
-      <section
-        id="experience"
-        className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20"
-      >
-        <div className="w-full max-w-7xl rounded-3xl bg-[#111827] shadow-2xl shadow-blue-500/20 mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
-          <motion.div
+      <section className="py-20 bg-gradient-to-r from-blue-800/20 to-indigo-800/20">
+        <div className="max-w-7xl mx-auto bg-[#020617] rounded-3xl px-6 md:px-10 py-14 shadow-2xl shadow-cyan-500/20">
+
+          {/* Heading */}
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
           >
-            <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Work Experience
-            </h2>
+            Work Experience
+          </motion.h2>
 
-            {/* ✅ 3 Column Grid Layout (no slider) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {experiences.map((exp) => (
-                <motion.div
-                  key={exp.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  whileHover={{ y: -20, scale: 1.05 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20,
-                    duration: 0.4,
-                  }}
-                  className="bg-gradient-to-r from-blue-800/20 to-indigo-800/20 rounded-lg overflow-hidden shadow-md flex flex-col justify-between hover:shadow-2xl hover:shadow-blue-500/40 cursor-pointer"
-                >
-                  {/* Image + Overlay */}
-                  <div className="relative group w-full h-52 sm:h-56 overflow-hidden rounded-t-lg">
-                    <img
-                      src={exp.image}
-                      alt={exp.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
-                    />
-                    <div className="absolute inset-0 bg-blue-500/30 backdrop-blur-md opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center gap-4">
+          {/* Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {experiences.map((exp) => (
+              <motion.div
+                key={exp.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -12 }}
+                transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                className="bg-gradient-to-br from-[#0f172a] to-[#020617]
+                rounded-2xl border border-white/10 overflow-hidden
+                shadow-xl hover:shadow-cyan-500/30 transition-all duration-500
+                flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative h-60 overflow-hidden">
+                  <img
+                    src={exp.image}
+                    alt={exp.title}
+                    className="w-full h-full object-cover hover:scale-110 transition duration-700"
+                  />
+
+                  {/* Hover Icons */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition duration-500 flex items-center justify-center gap-6">
+                    <a
+                      href={exp.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-cyan-400"
+                    >
+                      <FaGithub size={30} />
+                    </a>
+
+                    {exp.liveDemo && (
                       <a
-                        href={exp.github}
+                        href={exp.liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-cyan-200 transition"
+                        className="text-white hover:text-cyan-400"
                       >
-                        <FaGithub size={28} />
+                        <FaExternalLinkAlt size={28} />
                       </a>
-                      {exp.liveDemo && (
-                        <a
-                          href={exp.liveDemo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white hover:text-cyan-200 transition"
-                        >
-                          <FaExternalLinkAlt size={26} />
-                        </a>
-                      )}
-                    </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-1 gap-4">
+                  <h3 className="text-2xl font-bold text-white">
+                    {exp.title}
+                  </h3>
+
+                  <span className="text-sm text-cyan-400 font-semibold">
+                    {exp.category}
+                  </span>
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {exp.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {exp.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 rounded-full
+                        bg-cyan-500/10 border border-cyan-500/30
+                        text-cyan-300 text-xs"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
 
-                  {/* Content */}
-                  <div className="p-5 flex flex-col gap-3 flex-1">
-                    <h3 className="text-xl font-semibold text-white">
-                      {exp.title}
-                    </h3>
-                    <p className="text-purple-300 text-sm font-medium">
-                      {exp.category}
-                    </p>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {exp.description}
-                    </p>
-
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs transition"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="mt-4 flex gap-3">
-                      {exp.liveDemo && (
-                        <a
-                          href={exp.liveDemo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm transition"
-                        >
-                          Live Demo
-                        </a>
-                      )}
+                  {/* Buttons */}
+                  <div className="mt-auto flex gap-4 pt-6">
+                    {exp.liveDemo && (
                       <a
-                        href={exp.github}
+                        href={exp.liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white text-sm transition"
+                        className="px-5 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white text-sm"
                       >
-                        View Code
+                        Live Demo
                       </a>
-                    </div>
+                    )}
+
+                    <a
+                      href={exp.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-xl border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-sm"
+                    >
+                      View Code
+                    </a>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
