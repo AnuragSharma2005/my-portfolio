@@ -62,7 +62,7 @@ const Home = () => {
         </p>
         <div className="flex gap-4">
           <a
-            href="/anurag-resume.pdf"
+            href="/Anurag-Resume (Fico).pdf"
             className="px-5 py-3 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-3xl font-semibold transition cursor-hover p-6 hover:brightness-110"
             download
           >
