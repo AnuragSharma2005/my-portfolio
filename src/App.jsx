@@ -2,7 +2,7 @@ import BackgroundAnimations from "./components/BackgroundAnimations";
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Startup from "./components/Startup";
+// import Startup from "./components/Startup";
 import Skills from './components/Skills';
 import Services from "./components/Services";
 // import Achievements from './components/achievements';
@@ -25,7 +25,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Startup />
+      {/* <Startup /> */}
       <Skills />
       <Services />
       {/* <Projects /> */}
