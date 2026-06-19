@@ -1,10 +1,13 @@
 import { useState } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const links = [
     { id: 1, link: 'home' },
@@ -16,6 +19,21 @@ const Navbar = () => {
     { id: 7, link: 'contact' },
   ];
 
+  const isHomePage = location.pathname === '/';
+
+  const handleNavClick = (link) => {
+    setNav(false);
+    if (!isHomePage) {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(link);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -26,28 +44,48 @@ const Navbar = () => {
       {/* Main Navbar Container */}
       <div className="w-full max-w-6xl bg-[#0e0f1a]/80 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-2xl flex items-center justify-between">
         {/* Left: Name */}
-        <Link
-          to="home"
-          smooth
-          duration={500}
-          className="text-xl sm:text-3xl font-bold text-white cursor-pointer"
-        >
-          Anurag Sharma
-        </Link>
+        {/* Left: Name */}
+        {isHomePage ? (
+          <ScrollLink
+            to="home"
+            smooth
+            duration={500}
+            className="text-xl sm:text-3xl font-bold text-white cursor-pointer"
+          >
+            Anurag Sharma
+          </ScrollLink>
+        ) : (
+          <RouterLink
+            to="/"
+            className="text-xl sm:text-3xl font-bold text-white cursor-pointer no-underline"
+          >
+            Anurag Sharma
+          </RouterLink>
+        )}
 
 
         {/* Center Links (Desktop) */}
         <div className="hidden md:flex space-x-8">
           {links.map(({ id, link, label }) => (
-            <Link
-              key={id}
-              to={link}
-              smooth
-              duration={500}
-              className="capitalize text-white hover:text-[#8c8aff] cursor-pointer transition text-lg"
-            >
-              {label || link}
-            </Link>
+            isHomePage ? (
+              <ScrollLink
+                key={id}
+                to={link}
+                smooth
+                duration={500}
+                className="capitalize text-white hover:text-[#8c8aff] cursor-pointer transition text-lg"
+              >
+                {label || link}
+              </ScrollLink>
+            ) : (
+              <button
+                key={id}
+                onClick={() => handleNavClick(link)}
+                className="capitalize text-white hover:text-[#8c8aff] cursor-pointer transition text-lg bg-transparent border-none outline-none"
+              >
+                {label || link}
+              </button>
+            )
           ))}
         </div>
 
@@ -68,16 +106,26 @@ const Navbar = () => {
           className="absolute top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#0e0f1a]/80 backdrop-blur-sm rounded-xl py-6 px-6 shadow-xl flex flex-col items-center space-y-4 md:hidden"
         >
           {links.map(({ id, link, label }) => (
-            <Link
-              key={id}
-              to={link}
-              smooth
-              duration={500}
-              onClick={() => setNav(false)}
-              className="text-lg text-white capitalize hover:text-[#8c8aff]"
-            >
-              {label || link}
-            </Link>
+            isHomePage ? (
+              <ScrollLink
+                key={id}
+                to={link}
+                smooth
+                duration={500}
+                onClick={() => setNav(false)}
+                className="text-lg text-white capitalize hover:text-[#8c8aff]"
+              >
+                {label || link}
+              </ScrollLink>
+            ) : (
+              <button
+                key={id}
+                onClick={() => handleNavClick(link)}
+                className="text-lg text-white capitalize hover:text-[#8c8aff] bg-transparent border-none outline-none cursor-pointer"
+              >
+                {label || link}
+              </button>
+            )
           ))}
         </motion.div>
       )}

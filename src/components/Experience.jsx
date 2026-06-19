@@ -13,7 +13,7 @@ const experiences = [
       "Developed a modern and professional portfolio website for a corporate trainer, motivational speaker, and event anchor.",
       "Designed a fully responsive user interface ensuring seamless experience across desktop, tablet, and mobile devices.",
       "Implemented smooth animations and interactive transitions using Framer Motion to enhance user engagement.",
-      "Created well-structured sections including About, Services, Achievements, Testimonials, Gallery, and Contact.",
+      "Created well-structured sections includingHome Home, About, Recommendations, Brands, Events, Contact.",
       "Integrated contact and inquiry forms with Google Sheets for efficient lead collection and management.",
       "Configured custom domain integration, hosting setup, SSL certification, and production deployment.",
       "Ensured clean code architecture, maintainability, and scalability for future content and feature updates.",
@@ -26,7 +26,7 @@ const experiences = [
  {
   id: "zaika-recipes",
   title: "Zaika Recipes – Recipe Box",
-  category: "Full-Stack Web Developer (Client Project)",
+  category: "Full-Stack Web Developer ",
   description: [
     "Developed a full-stack recipe sharing platform that enables creators to publish, manage, and promote cooking content through dedicated recipe pages.",
     "Built a scalable React.js frontend with responsive UI optimized for desktop, tablet, and mobile devices.",
@@ -40,7 +40,7 @@ const experiences = [
     "Configured domain setup, hosting, deployment pipeline, and production environment for reliable performance.",
     "Implemented scalable backend architecture and clean code practices to support future platform growth."
   ],
-  technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "Cloudinary", "DigitalOcean", "Vercel", "Name.com", "Git/GitHub"],
+  technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "Cloudinary", "DigitalOcean", "Vercel", "Name.com", "Git/GitHub", "APIs"],
   liveDemo: "https://www.zaikarecipes.app/",
   image: "/Exp3logo.png",
 },
@@ -51,7 +51,7 @@ const experiences = [
     description: [
       "Developed a modern and responsive school website to enhance the institution's digital presence and improve communication with parents, students, and prospective admissions.",
       "Designed a clean and user-friendly interface optimized for desktop, tablet, and mobile devices.",
-      "Created dedicated sections for Academics, Admissions, Facilities, Gallery, Events, Announcements, and Contact Information.",
+      "Created dedicated sections including Home, About, Curriculum, Admissions, Fee Structure, Faculty, Facilities, Gallery, Contact, and Enroll Now for easy access to essential school information.",
       "Integrated Admission Inquiry, Contact, and Feedback forms with Google Sheets using Google Apps Script for automated data collection and management.",
       "Developed a custom Admin Panel to manage and monitor inquiries, contact requests, and feedback submissions from a centralized dashboard.",
       "Implemented gallery management functionality allowing administrators to upload and display school event and activity images dynamically.",
