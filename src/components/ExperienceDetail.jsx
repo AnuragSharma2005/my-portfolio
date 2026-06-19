@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { experiences } from "./Experience"
@@ -16,6 +16,10 @@ const ExperienceDetail = () => {
     return localStorage.getItem(`like_exp_${id}`) === "true";
   });
   const [showLikedToast, setShowLikedToast] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const handleLike = async () => {
     const newLiked = !isLiked;
@@ -298,19 +302,20 @@ const getSkillIcon = (skill) => {
           <div className="p-5 pb-6">
             <h3 className="font-extrabold text-[1.1rem] text-lightText mb-4">About this project</h3>
             {Array.isArray(exp.description) ? (
-              <ul className="list-disc pl-5 space-y-2.5 text-lightestText text-[0.92rem] leading-relaxed">
+              <div className="space-y-3.5 text-lightestText text-[0.9rem] md:text-[0.92rem] leading-relaxed">
                 {exp.description.map((point, index) => (
-                  <motion.li
+                  <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.05 * index }}
-                    className="pl-1 marker:text-secondary hover:text-white transition-colors duration-200"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.04 * index }}
+                    className="flex items-start gap-3 hover:text-white transition-colors duration-200"
                   >
-                    {point}
-                  </motion.li>
+                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-secondary mt-2 shadow-[0_0_8px_rgba(20,184,166,0.8)]" />
+                    <span>{point}</span>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
             ) : (
               <p className="text-lightestText text-[0.92rem] leading-relaxed">{exp.description}</p>
             )}

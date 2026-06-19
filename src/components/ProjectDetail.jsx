@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { projectsData } from "../data/projectsData";
@@ -25,6 +25,10 @@ const ProjectDetail = () => {
     return localStorage.getItem(`like_project_${id}`) === "true";
   });
   const [showLikedToast, setShowLikedToast] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const handleLike = async () => {
     const newLiked = !isLiked;
@@ -297,7 +301,24 @@ const getSkillIcon = (skill) => {
           {/* About */}
           <div className="p-5 pb-6">
             <h3 className="font-extrabold text-[1.1rem] text-lightText mb-3">About this project</h3>
-            <p className="text-lightestText text-[0.92rem] leading-relaxed">{project.about}</p>
+            {Array.isArray(project.about) ? (
+              <div className="space-y-3.5 text-lightestText text-[0.9rem] md:text-[0.92rem] leading-relaxed">
+                {project.about.map((point, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.04 * index }}
+                    className="flex items-start gap-3 hover:text-white transition-colors duration-200"
+                  >
+                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-secondary mt-2 shadow-[0_0_8px_rgba(20,184,166,0.8)]" />
+                    <span>{point}</span>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-lightestText text-[0.92rem] leading-relaxed">{project.about}</p>
+            )}
           </div>
         </motion.div>
 
