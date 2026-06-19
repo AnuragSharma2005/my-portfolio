@@ -41,6 +41,7 @@ const experiences = [
     "Implemented scalable backend architecture and clean code practices to support future platform growth."
   ],
   technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Authentication", "Cloudinary", "DigitalOcean", "Vercel", "Name.com", "Git/GitHub", "APIs"],
+  github: "https://github.com/adityasharma0903/cookme",
   liveDemo: "https://www.zaikarecipes.app/",
   image: "/Exp3logo.png",
 },
